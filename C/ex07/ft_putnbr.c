@@ -1,47 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 12:16:53 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/12 12:40:35 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/12 12:42:43 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/12 16:19:14 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	imprimir(int valor)
+void	imprimir(char c)
 {
-	int	valor1;
-	int	valor2;
-
-	valor1 = (valor / 10) + '0';
-	valor2 = (valor % 10) + '0';
-	write(1, &valor1, 1);
-	write(1, &valor2, 1);
+	write(1, &c, 1);
 }
 
-void	ft_print_comb2(void)
+void	ft_putnbr(int nb)
 {
-	int	x;
-	int	y;
-
-	x = -1;
-	y = 0;
-	while (x++ < 98)
+	if (nb < 0)
 	{
-		while (y++ < 99)
-		{
-			imprimir(x);
-			write(1, " ", 1);
-			imprimir(y);
-			if (!(y == 99 && x == 98))
-			{
-				write(1, ", ", 1);
-			}
-		}
-		y = x + 1;
+		imprimir('-');
+		nb *= -1;
 	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	if (nb < 10)
+		imprimir(nb + 48);
+}
+
+int	main(void)
+{
+	ft_putnbr(42);
+	return (0);
 }
