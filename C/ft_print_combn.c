@@ -5,7 +5,8 @@ void	ft_putchar(char a)
 	write(1, &a, 1);
 }
 
- 
+void    ft_putvet(combn, n)
+{
 	int c;
 
 	c = 0;
