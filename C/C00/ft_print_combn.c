@@ -51,12 +51,12 @@ void	ft_increment(int vet[], int n, int index)
 
 void	ft_print_combn(int n)
 {
-	int combn[n]; // almacenamos los numeros que tenemos que imprimir aqui
+	int combn[10]; // almacenamos los numeros que tenemos que imprimir aqui
 	int c;
 	int pos_index; // posicion del indice
 
 	if (n >= 10 || n <= 0) //  0 < n < 10
-		return ;
+		return write(2, "Error", 5);
 	else // imprimir secuencias
 	{
 		c = 0;
