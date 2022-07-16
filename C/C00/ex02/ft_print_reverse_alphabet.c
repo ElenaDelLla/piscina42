@@ -12,7 +12,7 @@
 
 #include<unistd.h>
 
-void	decreciente(void)
+void    ft_print_reverse_alphabet(void)
 {	
 	char	letra;
 

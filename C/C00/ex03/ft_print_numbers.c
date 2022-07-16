@@ -12,7 +12,7 @@
 
 #include<unistd.h>
 
-void	digitos(void)
+void	ft_print_numbers(void)
 {
 	int		numero;
 	char	ascii;

@@ -10,39 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-void	ft_sort_int_tab(int *tab, int size)
+void    ft_swap(int *a, int *b)
 {
-	int	aux;
-	int	c;	
+    int        c;
 
-	c = 0;
-	while (c < 10)
-	{
-		if (c > tab[size - 1 + c])
-		{
-			aux = tab[size - 1 + c];
-			tab[size - 1 + c] = tab[c];
-			tab[c] = aux;
-		}
-	}
-	c++;
+    c = *b;
+    *b = *a;
+    *a = c;
 }
-/*int	main(void)
+
+void    ft_rev_int_tab(int *tab, int size)
 {
-	int *tab;
-	int size;
-	int temp[] = {1,2,5,9};
-	int c;
+    int        i;
+    int        j;
 
-	size = 4;
-	tab = temp;
-	ft_sort_int_tab(temp, size);
-	while (c < size)
-	{
-		printf("tab[%d]\n" "es %d", c, temp[c]);
-	}
+    i = 0;
+    j = size - 1;
+    while (i < j)
+    {
+        ft_swap(&tab[i], &tab[j]);
+        i++;
+        j--;
+    }
+}
 
+void    ft_sort_int_tab(int *tab, int size)
+{
+    int    i;
 
-}*/
+    i = 0;
+    while (i < (size - 1))
+    {
+        if (tab[i] < tab[(i + 1)])
+        {
+            ft_swap(&tab[(i + 1)], &tab[i]);
+            i = 0;
+        }
+        else
+            i++;
+    }
+    ft_rev_int_tab(tab, size);
+}
