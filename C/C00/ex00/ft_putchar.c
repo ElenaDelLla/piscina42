@@ -6,12 +6,12 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 16:16:55 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/11 10:46:56 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/16 12:54:48 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write (1, &c, 1);
 }

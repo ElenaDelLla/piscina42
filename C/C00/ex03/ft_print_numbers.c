@@ -14,14 +14,14 @@
 
 void	ft_print_numbers(void)
 {
-	int		numero;
+	int		num;
 	char	ascii;
 
-	numero = 0;
-	while (numero <= 9)
+	num = 0;
+	while (num <= 9)
 	{
-		ascii = numero + '0';
+		ascii = num + '0';
 		write(1, &ascii, 1);
-		numero ++;
+		num ++;
 	}
 }

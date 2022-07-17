@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 15:07:40 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/14 16:04:51 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/16 13:19:20 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include  <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -31,6 +29,6 @@ int	ft_strlen(char *str)
 	int d;
 
 	str = "hola....";
-	printf("numero %d\n", ft_strlen(str));
+	printf("El numero de caracteres es: %d\n", ft_strlen(str));
 	return(0);
 }*/

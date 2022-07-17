@@ -6,30 +6,26 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:05:22 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/14 19:20:29 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/16 13:20:21 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int vec[size];
-	int c;
-	int temp;
+	int	c;
+	int	temp;	
 
 	c = 0;
-	while (*tab < size/2)
+	while (c < size / 2)
 	{
-		temp = vec[size];
-		vec[c] = vec[size -1 -c];
-		vec[size - 1 - c] = temp;
-
-		c++;		
+		temp = tab [size - c - 1];
+		tab [size - 1 - c] = tab [c];
+		tab [c] = temp;
+		c++;
 	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int size;
 	int	aux[] = {1,2,3,4};
@@ -38,9 +34,10 @@ int	main(void)
 
 	size = 4;
 	tab = aux;
-	while (c > 0)
+	ft_rev_int_tab(aux, size);
+	while (c < size)
 	{
-		printf();
+		printf("%d\n", aux[c]);
+		c++;
 	}
-	ft_rev_int_tab(tab, size);
-}
+}*/

@@ -6,13 +6,13 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:16:53 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/12 12:40:35 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/14 11:16:13 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	imprimir(int valor)
+void	ft_putchar(int valor)
 {
 	int	valor1;
 	int	valor2;
@@ -34,9 +34,9 @@ void	ft_print_comb2(void)
 	{
 		while (y++ < 99)
 		{
-			imprimir(x);
+			ft_putchar(x);
 			write(1, " ", 1);
-			imprimir(y);
+			ft_putchar(y);
 			if (!(y == 99 && x == 98))
 			{
 				write(1, ", ", 1);
