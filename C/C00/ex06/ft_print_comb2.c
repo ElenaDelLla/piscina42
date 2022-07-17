@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:16:53 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/14 11:16:13 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/17 16:48:37 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,13 @@ void	ft_print_comb2(void)
 			ft_putchar(y);
 			if (!(y == 99 && x == 98))
 			{
-				write(1, ", ", 1);
+				write(1, ", ", 2);
 			}
 		}
 		y = x + 1;
 	}
 }
+/*int	 main(void)
+{
+	ft_print_comb2();
+}*/

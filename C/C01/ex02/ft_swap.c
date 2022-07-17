@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 18:32:44 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/16 13:17:58 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/17 16:20:50 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ void	ft_swap(int *a, int *b)
 	c = *a;
 	*a = *b;
 	*b = c;
-	
 }
-int main(void)
+/*int main(void)
 {
 	int	a;
 	int	b;
@@ -31,4 +30,4 @@ int main(void)
 	pa = &a;
 	pb = &b;
 	ft_swap(pa, pb);
-}
+}*/
