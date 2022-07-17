@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/16 17:21:09 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/16 18:26:35 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/17 18:57:05 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/17 19:02:17 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_printable(char *str)
 {
-	char	carac;
-	int 	i;
-
-	i = 0;
-	while (src[i] != '\0')
+	if (*srt == '\0')
 	{
-		*dest = src[i];
+		return (1);
 	}
-	return(dest);
-}
-
-int	main(void)
-{
-	char	*func;
-	char	*dest;
-	char	*src;
-
-	src = "Hola Marvin";
-	dest = " ";
-	func = ft_strcpy(dest, src);
-	printf("Cadena 1 %s y cadena 2 %s", func(*dest), func(*src));
+	while (*srt != '\0')
+	{
+		if (*srt >= 32 && *srt <= 126)
+		srt++;
+		else
+			return (0);
+	}
+	return (1);
 }
