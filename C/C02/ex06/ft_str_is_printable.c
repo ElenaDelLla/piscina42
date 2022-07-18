@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 18:57:05 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/17 19:02:17 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/18 16:04:51 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int	ft_str_is_printable(char *str)
 	while (*srt != '\0')
 	{
 		if (*srt >= 32 && *srt <= 126)
+		{
 		srt++;
+		}
 		else
 			return (0);
 	}

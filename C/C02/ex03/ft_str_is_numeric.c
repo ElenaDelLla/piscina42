@@ -6,26 +6,20 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 13:36:08 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/17 18:37:26 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/18 15:50:28 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_numeric(char *str)
 {
-	int	pos;
-	int	con;
-
-	post = 0;
-	con = 0;
-	if (src[pos] == '\0')
+	if (*src == '\0')
 		return (1);
-	while (src[pos] != '\0')
+	while (*src != '\0')
 	{
-		if (src[pos] > '0' || src[pos] < '9' )
-		{
-			return (1);
-		}
-		pos++;
+		if (*src > '0' || *src < '9')
+			src++;
+		else
+			return (0);
 	}
-	return (0);
+	return (1);
 }
