@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:03:31 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 13:15:42 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:37:16 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,7 @@ char	*ft_strcapitalize(char *str)
 	int	c;
 
 	c = 1;
-	str = ft_strlowercase(str);
-	str[0] = ft_struppercase(str[0]);
-	while (str[0] != '\0')
-	{
-		if (ft_str_is_alpha(str[c - 1]) == 1)
-		{
-			str[c] = ft_struppercase(str[c]);
-		}
-		c++;
-	}
-	str[c] = '\0';
-	return (str);
+	
 }
 
 int	main(void)

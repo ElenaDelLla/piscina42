@@ -6,9 +6,11 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:15:28 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 12:40:07 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 17:11:12 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdio.h>
 
 char	*ft_strupcase(char *srt)
 {
@@ -17,8 +19,8 @@ char	*ft_strupcase(char *srt)
 		if (*srt >= 'a' && *srt <= 'z')
 		{
 			*srt = *srt - 32;
-			srt++;
 		}
+		srt++;
 	}
 	return (srt);
 }

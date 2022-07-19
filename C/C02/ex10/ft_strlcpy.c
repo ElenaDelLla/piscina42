@@ -6,19 +6,37 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 11:31:37 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 16:32:39 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 16:59:27 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	c;
+	unsigned	int	c;
+	unsigned	int	t;
 
 	c = 0;
-	while (c <= size)
+	while (*src != '\0')
 	{
-		dest[c] = src[c];
+		while(c < size)
+		{
+			*dest = *src;
+			src++;
+			dest++; ;
+			c++;
+			t = c;
+		}
+		src++;
 	}
-	dest[c] = '\0';
-	return ();
+	return (t);
 }
+
+/*int	main(void)
+{
+	char				src[] = "Hola Marvini";
+	char				dest[20] = "";
+	unsigned	int		size;
+
+	size = 4;
+	printf("%d\n", ft_strlcpy(dest, src, size));
+}*/

@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:27:59 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 12:53:57 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 17:04:54 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 char	*ft_srtlowercase(char *str)
 {
@@ -19,8 +17,8 @@ char	*ft_srtlowercase(char *str)
 		if (*str >= 'A' && *str <= 'Z')
 		{
 			*str = *str + 32;
-			str++;
 		}
+		str++;
 	}
 	return (str);
 }
