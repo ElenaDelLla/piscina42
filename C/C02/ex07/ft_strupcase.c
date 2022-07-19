@@ -6,22 +6,28 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:15:28 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 16:06:08 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:40:07 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strupcase(char *srt)
 {
-	int	a;
-
-	a = 0;
-	while (str[a] != '\0')
+	while (*srt != '\0')
 	{
-		if (srt[a] >= 'a' && str[a] <= 'z')
+		if (*srt >= 'a' && *srt <= 'z')
 		{
-			str[a] -= 32;
+			*srt = *srt - 32;
+			srt++;
 		}
-		a++;
 	}
-	return (str);
+	return (srt);
 }
+/*int	main(void)
+{
+	char	srt[] = "holamarvin";
+	char	*pointer = srt;
+	ft_strupcase(srt);
+
+	printf("%s\n", pointer);
+	return (0);
+}*/

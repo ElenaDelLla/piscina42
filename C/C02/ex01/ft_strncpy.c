@@ -6,16 +6,18 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 10:06:02 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/17 10:20:15 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 08:59:27 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdio.h>
 
 void	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int	i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && *src != '\0')
 	{
 		*dest = *src;
 		src++;

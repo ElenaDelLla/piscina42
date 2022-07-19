@@ -6,31 +6,31 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:03:31 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 12:13:16 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:15:42 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdio.h>
+
 char	*ft_strlowercase(char *str)
 {
-	int	a;
-
-	a = 0;
-	while (srt[a] != '\0')
+	while (*str != '\0')
 	{
-		if (str[a] >= 'A' && str[a] <= 'Z')
+		if (*str >= 'A' && *str <= 'Z')
 		{
-			str[a] += 32;
+			 *str = *str + 32;
+			 str++;
 		}
-		a++;
 	}
 	return (str);
 }
 
 char	ft_srtuppercase(char str)
 {
-	if (str >= 'a' && str <= 'z')
+	if (*str >= 'a' && *str <= 'z')
 	{
-		str -= 32;
+		*str = *str - 32;
+		str++;
 	}
 	return (str);
 }
@@ -49,7 +49,7 @@ int	ft_str_is_alpha(char str)
 		return (0);
 }
 
-char	*ft_strcapitalize(cha *str)
+char	*ft_strcapitalize(char *str)
 {	
 	int	c;
 
@@ -66,4 +66,14 @@ char	*ft_strcapitalize(cha *str)
 	}
 	str[c] = '\0';
 	return (str);
+}
+
+int	main(void)
+{
+	char	str[] = "hola marvin";
+	char	*pointer = str;
+	ft_strcapitalize(str);
+
+	printf("%s\n", pointer);
+	return (0);
 }

@@ -6,24 +6,33 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 18:57:05 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 16:04:51 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:37:53 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdio.h>
+
 int	ft_str_is_printable(char *str)
 {
-	if (*srt == '\0')
+	if (*str == '\0')
 	{
 		return (1);
 	}
-	while (*srt != '\0')
+	while (*str != '\0')
 	{
-		if (*srt >= 32 && *srt <= 126)
+		if (*str >= 32 && *str <= 126)
 		{
-		srt++;
+			str++;
 		}
 		else
 			return (0);
 	}
 	return (1);
 }
+
+/*int	main(void)
+{
+	char	str[] = "!#)()/&.";
+
+	printf("%d\n", ft_str_is_printable(str));
+}*/

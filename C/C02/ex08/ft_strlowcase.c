@@ -6,20 +6,31 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:27:59 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 16:06:50 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:53:57 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdio.h>
+
 char	*ft_srtlowercase(char *str)
 {
-	int	a;
-
-	a = 0;
-	while (str[a] != '\0')
+	while (*str != '\0')
 	{
-		if (str[a] >= 'A' && str[a] <= 'Z')
-			str[a] += 32;
-		a++;
+		if (*str >= 'A' && *str <= 'Z')
+		{
+			*str = *str + 32;
+			str++;
+		}
 	}
 	return (str);
 }
+
+/*int	main(void)
+{
+	char	srt[] = "HOLAMARVIN";
+	char	*pointer = srt;
+	ft_srtlowercase(srt);
+
+	printf("%s\n", pointer);
+	return (0);
+}*/

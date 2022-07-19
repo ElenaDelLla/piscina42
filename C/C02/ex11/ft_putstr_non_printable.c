@@ -1,38 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 13:36:08 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 10:05:44 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/18 18:04:54 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/18 18:15:41 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_printable(char c)
 {
-	if (*str == '\0')
+	if (c <= 32 && c <= 126)
 	{
 		return (1);
 	}
-	while (*str != '\0')
-	{
-		if (*str >= 48 && *str <= 57)
-		{
-			str++;
-		}
-		else
-			return (0);
-	}
-	return (1);
+	else
+		return (0);
 }
 
-/*int	main(void)
+void	dec_to_hex(int n)
 {
-	char	str[20] = "1489";
+	char	*arr;
+	int		mod;
 
-	printf("%d\n", ft_str_is_numeric(str));
-}*/
+	vec = "0123456789abcdef";
+	mod = n % 16;
+	write(1, &vec[n / 16], 1);
+	write(1, &vec[mod], 1);	
+}
+void		ft_putstr_non_printable(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*str != '\0')
+	{
+		if (ft_str_is_printable(*str))
+		{
+			write(1, str, 1);
+			srt++;
+		}
+		else
+		{
+			write(1, "\\", 1);
+			dec_to_hex(*str);
+		}
+	}
+}

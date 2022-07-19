@@ -6,9 +6,11 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:54:03 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 15:52:04 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 09:21:28 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {
@@ -18,7 +20,7 @@ int	ft_str_is_alpha(char *str)
 	}
 	while (*str != '\0')
 	{
-		if (*str >= 65 && *str <= 90 || *str >= 97 && *str <= 122)
+		if ((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z'))
 		{
 			str++;
 		}
@@ -26,3 +28,10 @@ int	ft_str_is_alpha(char *str)
 			return (0);
 	}
 	return (1);
+}
+/*int	main(void)
+{
+	char	str[20] = "HolaMarvin";
+	
+	printf("%d\n", ft_str_is_alpha(str));
+}*/
