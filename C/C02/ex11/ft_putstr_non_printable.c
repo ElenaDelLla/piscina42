@@ -6,13 +6,15 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 18:04:54 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/18 18:15:41 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/19 18:39:01 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<unistd.h>
+
 int	ft_str_is_printable(char c)
 {
-	if (c <= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
@@ -22,30 +24,38 @@ int	ft_str_is_printable(char c)
 
 void	dec_to_hex(int n)
 {
-	char	*arr;
+	char	*vec;
 	int		mod;
 
 	vec = "0123456789abcdef";
 	mod = n % 16;
 	write(1, &vec[n / 16], 1);
-	write(1, &vec[mod], 1);	
+	write(1, &vec[mod], 1);
 }
-void		ft_putstr_non_printable(char *str)
-{
-	int	i;
 
-	i = 0;
+void	ft_putstr_non_printable(char *str)
+{
+	int	a;
+
 	while (*str != '\0')
 	{
 		if (ft_str_is_printable(*str))
 		{
 			write(1, str, 1);
-			srt++;
 		}
 		else
 		{
 			write(1, "\\", 1);
-			dec_to_hex(*str);
+			a = *str;
+			dec_to_hex(a);
 		}
+		str++;
 	}
 }
+/*int	main()
+{
+	char src[] = "Coucou\ntu vas bien?";
+
+	ft_putstr_non_printable(src);
+	return (0);
+}*/
