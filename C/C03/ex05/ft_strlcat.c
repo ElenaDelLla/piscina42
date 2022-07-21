@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 14:38:49 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/20 15:53:20 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/21 11:59:49 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/21 13:50:20 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+//#include<stdio.h>
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	char	*ini;
 	int		c;
@@ -21,7 +23,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		dest++;
 	}
 	c = 0;
-	while (*src != '\0' && c < nb)
+	while (*src != '\0' && c < size)
 	{
 		*dest = *src;
 		dest++;
@@ -29,14 +31,19 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		c++;
 	}
 	*dest = '\0';
-	return (ini);
+	c = 0;
+	while (*ini != '\0')
+	{
+		ini++;
+		c++;
+	}
+	return (c);
 }
-/*int	main(void)
+/*int main(void)
 {
 	char	dest[] = "hola";
-	char	src[] = "12345";
-	unsigned int	nb;
+	char	src[] = "adios";
+	unsigned int	size = 3;
 
-	nb = 7;
-	printf("%s", ft_strncat(dest, src, nb));
+	printf("%d", ft_strlcat(dest, src, size));
 }*/
