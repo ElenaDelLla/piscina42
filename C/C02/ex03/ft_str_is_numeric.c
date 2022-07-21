@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 13:36:08 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 10:05:44 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:40:21 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 int	ft_str_is_numeric(char *str)
 {

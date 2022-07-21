@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 18:50:57 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 10:28:00 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:43:29 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 int	ft_str_is_uppercase(char *str)
 {
@@ -29,7 +27,6 @@ int	ft_str_is_uppercase(char *str)
 	}
 	return (1);
 }
-
 /*int	main(void)
 {
 	char	str[] = "HOLAmARVIN00";

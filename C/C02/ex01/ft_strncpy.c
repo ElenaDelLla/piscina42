@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 10:06:02 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 08:59:27 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:38:53 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -26,7 +24,6 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-
 /*int	main(void)
 {
 	char	dest[20] = "";

@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 14:54:03 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 09:21:28 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:41:09 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 int	ft_str_is_alpha(char *str)
 {

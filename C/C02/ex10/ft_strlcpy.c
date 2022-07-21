@@ -6,23 +6,23 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 11:31:37 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 18:02:42 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:21:53 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned	int	c;
-	unsigned	int	t;
+	unsigned int	c;
+	unsigned int	t;
 
 	c = 0;
 	while (*src != '\0')
 	{
-		while(c < size)
+		while (c < size)
 		{
 			*dest = *src;
 			src++;
-			dest++; ;
+			dest++;
 			c++;
 			t = c;
 		}
@@ -30,13 +30,12 @@ unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	}
 	return (t);
 }
-
 /*int	main(void)
 {
-	char				src[] = "Hola Marvini";
-	char				dest[20] = "";
+	char				src[] = "adios";
+	char				dest[20] = "Hola Marvini";
 	unsigned	int		size;
 
-	size = 4;
-	printf("%d\n", ft_strlcpy(dest, src, size));
+	size = 10;
+    printf("%d", ft_strlcpy(dest, src, size));
 }*/

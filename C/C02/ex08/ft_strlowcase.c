@@ -6,12 +6,15 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:27:59 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 17:04:54 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:52:52 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_srtlowercase(char *str)
 {
+    char    *pointer;
+    
+    pointer = str;
 	while (*str != '\0')
 	{
 		if (*str >= 'A' && *str <= 'Z')
@@ -20,15 +23,12 @@ char	*ft_srtlowercase(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (pointer);
 }
-
 /*int	main(void)
 {
 	char	srt[] = "HOLAMARVIN";
-	char	*pointer = srt;
-	ft_srtlowercase(srt);
 
-	printf("%s\n", pointer);
+	printf("%s", ft_srtlowercase(srt));
 	return (0);
 }*/

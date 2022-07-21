@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 17:21:09 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 08:53:34 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:37:41 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	return (dest);
 }
-
 /*int    main(void)
 {
     char    dest[20]="";

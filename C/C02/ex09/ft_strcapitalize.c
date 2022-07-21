@@ -6,11 +6,9 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:03:31 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/19 19:23:41 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:16:52 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 void	ft_uppercase(char *str)
 {
@@ -26,36 +24,44 @@ void	ft_lowercase(char *str)
 		*str = *str +32;
 }
 
+int	ft_is_symbol(char *str)
+{
+	if (*str >= 32 && *str <= 47)
+		return (1);
+	else if (*str >= 58 && *str <= 64)
+		return (1);
+	else if (*str >= 123 && *str <= 127)
+		return (1);
+	return (0);
+}
+
 char	*ft_strcapitalize(char *str)
-{	
+{
+	char	*pointer;
+
+	pointer = str;
 	ft_uppercase(str);
 	str++;
 	while (*str != '\0')
 	{
-		while ((*str >= 32 && *str <= 47) 
-					|| (*str >= 58 && *str <= 64) 
-					|| (*str >= 123 && *str <= 127))
-			{
-				str++;
-				if (*str >= 'a' && *str <= 'z')
-				{
-					*str = *str - 32;
-					str++;
-				}
-			}
-			ft_lowercase(str);
+		while (ft_is_symbol(str))
+		{
 			str++;
+			if (*str >= 'a' && *str <= 'z')
+			{
+				*str = *str - 32;
+				str++;
+			}
+		}
+		ft_lowercase(str);
+		str++;
 	}
-	return (str);
+	return (pointer);
 }
-/*
-  int	main(void)
+/* int	main(void)
 {
 	char	str[] = "hola marvin";
-	char	*pointer = str;
-	ft_strcapitalize(str);
 
-	printf("%s\n", pointer);
+	printf("%s\n", ft_strcapitalize(str));
 	return (0);
-}
-*/
+}*/
