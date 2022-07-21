@@ -6,15 +6,15 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:27:59 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/21 14:52:52 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/21 17:29:16 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_srtlowercase(char *str)
 {
-    char    *pointer;
-    
-    pointer = str;
+	char	*pointer;
+
+	pointer = str;
 	while (*str != '\0')
 	{
 		if (*str >= 'A' && *str <= 'Z')
