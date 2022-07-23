@@ -9,7 +9,7 @@ int isValidNumber(char * number){
 		*number++;
 		i++;
 	}
-	if(i >= 37 || i == 0){
+	if(i > 37 || i == 0){
 		return 0;
 	}
 	
