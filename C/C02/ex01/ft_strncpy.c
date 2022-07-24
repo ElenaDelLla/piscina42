@@ -10,14 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
-
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	int	i;
-	i = 0;
-	char *temp;
-    	temp=dest;
+    char    *temp;
+    
+    i = 0;
+    temp = dest;
 	while (i < n && *src != '\0')
 	{
 		*dest = *src;
@@ -25,15 +24,14 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest++;
 		i++;
 	}
-	while (i < n )
-	{
-		*dest = '\0';
-		dest++;
-		i++;
-	}
-	return temp;
+    while (i < n)
+    {
+        *dest = '\0';
+        dest++:
+        i++;
+    }
+	return (temp);
 }
-
 /*int	main(void)
 {
 	char	dest[20] = "";

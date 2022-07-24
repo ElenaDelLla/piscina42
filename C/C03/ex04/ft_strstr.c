@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+//#include<stdio.h>
 
 int	compare(char *str, char *to_find)
 {								

@@ -6,7 +6,7 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:03:31 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/21 15:16:52 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:54:13 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,31 @@ void	ft_uppercase(char *str)
 {
 	if (*str >= 'a' && *str <= 'z')
 	{
-		*str = *str -32;
+		*str = *str - 32;
 	}
 }
 
 void	ft_lowercase(char *str)
 {
 	if (*str >= 'A' && *str <= 'Z')
-		*str = *str +32;
+		*str = *str + 32;
 }
 
 int	ft_is_symbol(char *str)
 {
-	if (*str >= 32 && *str <= 47)
+	if (*str < '0')
+	{
 		return (1);
-	else if (*str >= 58 && *str <= 64)
+	}
+	else if (*str > '9' && *str < 'A')
+	{
 		return (1);
-	else if (*str >= 123 && *str <= 127)
+	}
+	else if (*str > 'Z' && *str < 'a')
+	{
+		return (1);
+	}
+	else if (*str > 'z')
 		return (1);
 	return (0);
 }
