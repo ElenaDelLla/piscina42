@@ -13,7 +13,7 @@
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	char	*ini;
-	int		c;
+	unsigned int		c;
 
 	ini = dest;
 	while (*dest != '\0')
