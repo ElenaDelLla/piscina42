@@ -6,11 +6,11 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 19:27:59 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/21 17:29:16 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/24 19:11:12 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_srtlowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	char	*pointer;
 
@@ -29,6 +29,6 @@ char	*ft_srtlowercase(char *str)
 {
 	char	srt[] = "HOLAMARVIN";
 
-	printf("%s", ft_srtlowercase(srt));
+	printf("%s", ft_strlowcase(srt));
 	return (0);
 }*/

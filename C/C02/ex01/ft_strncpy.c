@@ -6,17 +6,17 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 10:06:02 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/21 14:38:53 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/24 20:16:15 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
-    char    *temp;
-    
-    i = 0;
-    temp = dest;
+	unsigned int		i;
+	char	*temp;
+
+	i = 0;
+	temp = dest;
 	while (i < n && *src != '\0')
 	{
 		*dest = *src;
@@ -24,12 +24,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest++;
 		i++;
 	}
-    while (i < n)
-    {
-        *dest = '\0';
-        dest++:
-        i++;
-    }
+	while (i < n)
+	{
+		*dest = '\0';
+		dest++;
+		i++;
+	}
 	return (temp);
 }
 /*int	main(void)

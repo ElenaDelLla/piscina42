@@ -6,14 +6,14 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 14:38:49 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/20 15:53:20 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/24 19:54:36 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	char	*ini;
-	int		c;
+	char			*ini;
+	unsigned int	c;
 
 	ini = dest;
 	while (*dest != '\0')
