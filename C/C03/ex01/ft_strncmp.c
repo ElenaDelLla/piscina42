@@ -14,7 +14,9 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while ((*s1 != '\0' || *s2 != '\0') && (n < *s1 || n < *s2))
+    int c;
+    c = 0;
+	while ((*s1 != '\0' || *s2 != '\0') && (c < n))
 	{
 		if (*s1 > *s2)
 		{
@@ -26,6 +28,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		}
 		s1++;
 		s2++;
+		c++;
 	}
 	return (0);
 }
