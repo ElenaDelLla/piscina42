@@ -26,12 +26,15 @@ void	ft_lowercase(char *str)
 
 int	ft_is_symbol(char *str)
 {
-	if (*str >= 32 && *str <= 47)
-		return (1);
-	else if (*str >= 58 && *str <= 64)
-		return (1);
-	else if (*str >= 123 && *str <= 127)
-		return (1);
+    if(*str < '0'){
+        return (1);
+    } else if(*str > '9' && *str < 'A'){
+        return (1);
+    } else if(*str > 'Z' && *str < 'a'){
+        return (1);
+    } else if(*str > 'z'){
+        return (1);
+    }
 	return (0);
 }
 
@@ -58,10 +61,10 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (pointer);
 }
-/* int	main(void)
-{
-	char	str[] = "hola marvin";
 
-	printf("%s\n", ft_strcapitalize(str));
+/*int	main(void)
+{
+	char	str[] = "salut, comment tu v·as ? 42mots quarante-deux; cinquante+et+un";
+	printf("%s", ft_strcapitalize(str));
 	return (0);
 }*/
