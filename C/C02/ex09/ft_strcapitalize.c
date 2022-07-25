@@ -6,70 +6,62 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:03:31 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/24 14:54:13 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:51:17 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_uppercase(char *str)
+int	ft_str_is_alphanum(char str)
 {
-	if (*str >= 'a' && *str <= 'z')
+	if (!((str >= 65 && str <= 90) || (str >= 97 && str <= 122)))
 	{
-		*str = *str - 32;
+		if (!(str >= 48 && str <= 57))
+			return (0);
 	}
+	return (1);
 }
 
-void	ft_lowercase(char *str)
+int	ft_str_is_lower(char str)
 {
-	if (*str >= 'A' && *str <= 'Z')
-		*str = *str + 32;
+	if (!(str >= 97 && str <= 122))
+	{
+		return (0);
+	}
+	return (1);
 }
 
-int	ft_is_symbol(char *str)
+int	ft_str_is_upper(char str)
 {
-	if (*str < '0')
+	if (!(str >= 65 && str <= 90))
 	{
-		return (1);
+		return (0);
 	}
-	else if (*str > '9' && *str < 'A')
-	{
-		return (1);
-	}
-	else if (*str > 'Z' && *str < 'a')
-	{
-		return (1);
-	}
-	else if (*str > 'z')
-		return (1);
-	return (0);
+	return (1);
 }
 
 char	*ft_strcapitalize(char *str)
 {
-	char	*pointer;
+	int	i;
+	int	control;
 
-	pointer = str;
-	ft_uppercase(str);
-	str++;
-	while (*str != '\0')
+	i = 0;
+	control = 0;
+	while (str[i] != '\0')
 	{
-		while (ft_is_symbol(str))
-		{
-			str++;
-			if (*str >= 'a' && *str <= 'z')
-			{
-				*str = *str - 32;
-				str++;
-			}
-		}
-		ft_lowercase(str);
-		str++;
+		if (!ft_str_is_alphanum(str[i]))
+			control = 0;
+		if (ft_str_is_alphanum(str[i]) && control && ft_str_is_upper(str[i]))
+			str[i] = str[i] + 32;
+		if (!control && ft_str_is_alphanum(str[i]) && ft_str_is_lower(str[i]))
+			str[i] = str[i] - 32;
+		if (!control && ft_str_is_alphanum(str[i]))
+			control = 1;
+		i++;
 	}
-	return (pointer);
+	return (str);
 }
-/* int	main(void)
+/*int   main(void)
 {
-	char	str[] = "hola marvin";
-
-	printf("%s\n", ft_strcapitalize(str));
-	return (0);
+    char str[100]="SalUt, Comment tU vas ? 42mots quARANTE-deux;
+    printf("%s", ft_strcapitalize(str));
+    return (0);
 }*/

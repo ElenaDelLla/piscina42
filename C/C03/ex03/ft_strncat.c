@@ -12,8 +12,13 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
+<<<<<<< HEAD
 	char			*ini;
 	unsigned int	c;
+=======
+	char	*ini;
+	unsigned int		c;
+>>>>>>> 289612f2dc8f90703d18158623b25ae75d409608
 
 	ini = dest;
 	while (*dest != '\0')

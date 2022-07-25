@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 10:38:23 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/20 13:52:05 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/25 09:14:37 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/25 09:43:27 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include<unistd.h>
 
-char	*ft_strcat(char *dest, char *src)
+void	ft_putnbr(int nb)
 {
-	char	*ini;
+	int num;
 
-	ini = dest;
-	while (*dest != '\0')
-	{
-		dest++;
-	}
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (ini);
+	num = nb + '0';
+	write(1, num, );
 }
-/*int	main(void)
+int	main(void)
 {
-	char	src[20] = "Hola";
-	char	dest[20] = "15789";
-
-	printf("%s\n", ft_strcat(dest, src));
-	return 0;
-}*/
+	ft_putnbr();
+}

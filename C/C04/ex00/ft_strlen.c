@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 09:40:05 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/20 10:20:57 by eledelga         ###   ########.fr       */
+/*   Created: 2022/07/25 08:50:33 by eledelga          #+#    #+#             */
+/*   Updated: 2022/07/25 08:57:10 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-<<<<<<< HEAD
-=======
 //#include<stdio.h>
 
->>>>>>> 289612f2dc8f90703d18158623b25ae75d409608
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strlen(char *str)
 {
-	while (*s1 == *s2 && (*s1 != '\0' || *s2 != '\0'))
-	{
-		s1++;
-		s2++;
+	int	c;
+
+	c = 0;
+	while (*str != '\0')
+	{	
+		c++;
+		str++;
 	}
-	return (*s1 - *s2);
+	return (c);
 }
 /*int	main(void)
 {
-	char	s1[] = "hol";
-	char	s2[] = "hola";
+	char	*str = "Hola Marvin";
 
-	printf("%d", ft_strcmp(s1, s2));
+	printf("%d", ft_strlen(str));
 }*/

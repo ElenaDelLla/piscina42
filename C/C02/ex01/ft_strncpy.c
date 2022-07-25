@@ -6,14 +6,14 @@
 /*   By: eledelga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 10:06:02 by eledelga          #+#    #+#             */
-/*   Updated: 2022/07/24 20:16:15 by eledelga         ###   ########.fr       */
+/*   Updated: 2022/07/25 09:53:47 by eledelga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int		i;
-	char	*temp;
+	unsigned int	i;
+	char			*temp;
 
 	i = 0;
 	temp = dest;
