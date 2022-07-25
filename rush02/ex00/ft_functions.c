@@ -1,25 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_functions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlosga <carlosga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 17:56:36 by carlosga          #+#    #+#             */
-/*   Updated: 2022/07/23 12:34:50 by carlosga         ###   ########.fr       */
+/*   Updated: 2022/07/24 18:50:46 by maringar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <header.h>
+#include "header.h"
 
 int	ft_strlen(char *str)
 {
 	int	size;
 
 	size = 0;
-	while (str[size] != '\0')
+	while (str[size] != '\0' && str[size] > 31 && str[size] < 127)
 		size++;
 	return (size);
+}
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest [i + j] = '\0';
+	return (dest);
 }
 
 int	ft_atoi(char *str)
@@ -49,10 +67,51 @@ int	ft_atoi(char *str)
 		n = n * neg;
 	return (n);
 }
-/*
-int	main(int argc, char **argv)
+
+char	*valid_argv(int argc, char **argv)
 {
-	argc = 2;
-	printf("%d", ft_atoi(argv[1]));
+	char	*num;
+	int		c;
+
+	num = (char *)malloc(sizeof(char) * 50);
+	c = 0;
+	if (argc == 2)
+	{
+		while (argv[1][c] != '\0')
+		{
+			num[c] = argv[1][c];
+			c++;
+		}
+	}	
+	else if (argc == 3)
+	{
+		while (argv[2][c] != '\0')
+		{
+			num[c] = argv[2][c];
+			c++;
+		}
+	}
+	free(num);
+	return (num);
 }
-*/
+
+int	val_nums(char *num)
+{
+	int	rt;
+	int	i;
+
+	i = 0;
+	rt = 1;
+	if (ft_strlen(num) > 39)
+		rt = 0;
+	while (num[i] != '\0')
+	{
+		if ((num[i] < 48 || num[i] > 57) && (num[i] > 31 && num[i] < 127))
+		{
+			rt = 0;
+			break ;
+		}
+		i++;
+	}
+	return (rt);
+}

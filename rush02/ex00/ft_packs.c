@@ -6,10 +6,12 @@
 /*   By: carlosga <carlosga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 11:42:06 by maringar          #+#    #+#             */
-/*   Updated: 2022/07/23 19:35:17 by carlosga         ###   ########.fr       */
+/*   Updated: 2022/07/24 18:48:13 by maringar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <header.h>
+
+#include "header.h"
+#include <stdio.h>
 
 char	*ft_get_pack(char *str)
 {
@@ -62,15 +64,4 @@ char	*ft_rest_str(char *str)
 	}
 	return (newstr);
 	free(newstr);
-}
-
-int	main()
-{	
-	char	*str = "2324234";
-
-	while (ft_strlen(str) > 0)
-	{
-		printf("%s\n", ft_get_pack(str));
-		str = ft_rest_str(str);
-	}
 }
