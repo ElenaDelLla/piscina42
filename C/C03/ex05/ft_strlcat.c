@@ -13,23 +13,13 @@
 int string_length(char *string){
     int length;
     length = 0;
-<<<<<<< HEAD
-    char    *ini;
-    ini = string;
-    while (*ini != '\0')
-        {
-            ini++;
-            length++;
-        }
-=======
     char	*ini;
     ini = string;
     while (*ini != '\0')
     	{
     	    ini++;
-    		length++;
+    	    length++;
     	}
->>>>>>> 289612f2dc8f90703d18158623b25ae75d409608
     return length;
 }
 
@@ -61,11 +51,7 @@ char *closeIfNeeded(char *dest, char* src, unsigned int size){
 
 unsigned int    ft_strlcat(char *dest, char *src, unsigned int size)
 {
-<<<<<<< HEAD
     int  len;
-=======
-	int  len;
->>>>>>> 289612f2dc8f90703d18158623b25ae75d409608
     int  slen;
     len = string_length(dest);
     slen = 0;
